@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet');
+
+
+/*Globals*/
+* {
+    margin: 0px;
+    color: #084236;
+    box-sizing: border-box;
+}
+
+/*Main div content*/
+#main-tittle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0.2em;
+    margin-left: 4em;
+}
+
+/*Aside shrinked*/
+#aside-shrink{
+    background-color: #18c29c;
+    width: 5em;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;     
+    align-items: center;    
+
+    gap: .58em;
+
+    position: absolute;
+
+    transition: opacity ease-in-out 0.5s
+}
+
+#aside-shrink div:first-child{
+    padding: 1em;
+}
+
+#aside-shrink div:last-child{
+    background-color: #8ed7c6;
+    height: 4em;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    cursor: pointer;
+}
+
+.selected{
+    width: 70%;
+    height: 3.5em;
+    padding: 1em;
+
+    border-radius: 10px; 
+}
+
+/*Aside expanded*/
+#aside-expanded{
+    background-color: #18c29c;
+    width: 15em;
+    height: 100vh;      
+
+    display: flex;
+    flex-direction: column;      
+    align-items: left; 
+
+    gap: .63em;
+
+    position: absolute;
+
+    transition: opacity ease-in-out 0.5s
+}
+
+.selected-exp{
+    height: 3.5em;
+    padding: 1em;
+    margin: 0px 10px 0px 10px;
+    gap: 1em;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    border-radius: 10px;    
+}
+
+#aside-expanded div:first-child{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;  
+
+    padding: 1em;
+}
+
+#aside-expanded div:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;    
+    font-size: 14px;
+
+    height: 4.5em;
+    padding: 1em;
+
+    background-color: #8ed7c6;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    cursor: pointer;
+}
+
+.name-vet{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.photo{
+    height: 3em;
+    width: 3em;
+    border-radius: 10px;
+}
+
+/*Visual effects*/
+.selected:hover, .selected-exp:hover{
+    background-color: #8ed7c6;
+    cursor: pointer;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.invisible {
+    opacity: 0;    
+    pointer-events: none;
+}
